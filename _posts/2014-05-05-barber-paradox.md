@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Barber Paradox"
-date:   2014-05-05 13:03:37
+date:   2014-05-05 16:00:37
 categories: paradox
 author: "@craigburgess"
 ---
