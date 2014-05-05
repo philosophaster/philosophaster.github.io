@@ -869,7 +869,8 @@ Used on homepage
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
-  border-radius: 4px; }
+  border-radius: 4px;
+  margin-bottom: 20px; }
   .snippet div:first-child {
     -webkit-border-radius: 4px 4px 0 0;
     -moz-border-radius: 4px 4px 0 0;
@@ -920,7 +921,7 @@ Used on homepage
 
 .post__body p, .post__body li {
   line-height: 155%; }
-.post__body p {
+.post__body p, .post__body ul, .post__body ol {
   margin-bottom: 1.5em; }
 
 .post__meta {
@@ -934,3 +935,15 @@ Used on homepage
 
 Helper classes, specifc 1-off styles, error styles etc.
 -------------------------------------------------------------------*/
+@media (max-width: 800px) {
+  .gridded .one-fifth {
+    width: 25%; } }
+@media (max-width: 700px) {
+  .gridded .one-fifth {
+    width: 33%; } }
+@media (max-width: 580px) {
+  .gridded .one-fifth {
+    width: 50%; } }
+@media (max-width: 430px) {
+  .gridded .one-fifth {
+    width: 100%; } }

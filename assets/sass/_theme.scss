@@ -307,6 +307,7 @@ Used on homepage
 .snippet {
 	background: #eee;	
 	@include border-radius(4px);	
+	margin-bottom: 20px;
 
 	div:first-child {
 		@include border-radius(4px 4px 0 0);
@@ -378,7 +379,7 @@ Used on homepage
 			line-height: 155%;
 		}		
 
-		p {
+		p,ul,ol {
 			margin-bottom: 1.5em;
 		}
 	}
@@ -396,3 +397,23 @@ Used on homepage
 
 Helper classes, specifc 1-off styles, error styles etc.
 -------------------------------------------------------------------*/
+
+.gridded {
+	.one-fifth {
+		@include custom-max-breakpoint(800) {
+			width: 25%;
+		}
+
+		@include custom-max-breakpoint(700) {
+			width: 33%;
+		}
+
+		@include custom-max-breakpoint(580) {
+			width: 50%;
+		}
+
+		@include custom-max-breakpoint(430) {
+			width: 100%;
+		}
+	}
+}

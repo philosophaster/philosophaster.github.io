@@ -9,9 +9,16 @@
 bd = {
     common : {
         init : function() {
-
         }
-    }
+    },
+    
+    'index.html' : {
+        init : function() {
+            var container = document.querySelector('.gridded');
+            var msnry;
+            msnry = new Masonry( container );
+        }
+    },
 };
 
 UTIL = {
