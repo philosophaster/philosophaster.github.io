@@ -1,4 +1,1 @@
-philosophaster-jekyll
-=====================
-
-The Jekyll source of Philosophaster.
+The Knowledge. The Light. The True Way. The source of Philosophaster.
