@@ -186,6 +186,10 @@ Web fonts, basic unclassed type styles
 		li {
 			margin-right: 10px;
 			font-size: 1.3em;
+
+			@include custom-max-breakpoint(500) {
+				font-size: 1em;
+			}
 		}
 	}
 }
@@ -359,6 +363,14 @@ Used on homepage
 
 .post {
 	width: 60%;
+
+	@include custom-max-breakpoint(870) {
+		width: 500px;
+	}
+
+	@include custom-max-breakpoint(500) {
+		width: auto;
+	}
 }
 
 	.post__body {

@@ -776,6 +776,9 @@ Web fonts, basic unclassed type styles
 .site-header .nav li, .site-footer .nav li {
   margin-right: 10px;
   font-size: 1.3em; }
+  @media (max-width: 500px) {
+    .site-header .nav li, .site-footer .nav li {
+      font-size: 1em; } }
 
 .site-footer p {
   font-size: 1em;
@@ -908,6 +911,12 @@ Used on homepage
 
 .post {
   width: 60%; }
+  @media (max-width: 870px) {
+    .post {
+      width: 500px; } }
+  @media (max-width: 500px) {
+    .post {
+      width: auto; } }
 
 .post__body p, .post__body li {
   line-height: 155%; }
