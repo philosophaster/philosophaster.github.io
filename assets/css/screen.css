@@ -1,0 +1,927 @@
+@charset "UTF-8";
+/*****************************************
+$IMPORT
+******************************************/
+/*------------------------------------------------------------------
+
+Spacedoge - such pattern, much wow
+
+© Genius Division
+
+What's new?	
+	2014-02-12
+		* Added basic html for the new elements we're introducing
+		* Changed the name to Spacedoge
+		- CB
+
+	2014-01-13
+		A complete overhaul! Things have been neatened up, moved
+		around and all sorts of other exciting stuff.
+		- CB
+
+	2013-12-05
+		Added breakpoints to Spacedog.
+		- CB
+
+-------------------------------------------------------------------
+[Table of Contents]
+
+$Setup
+	Your first port of call.
+
+$Colours
+	Set up your site's colours.
+
+$Base 
+	Body styles, basic link styles
+
+$Type
+	Web fonts, basic unclassed type styles
+
+$Abstractions
+	Reusable design chunks
+
+$Style_trumps
+	Helper classes, specifc 1-off styles,
+	error styles etc.
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[$Setup]
+
+Your first port of call. Includes all necessary files.
+-------------------------------------------------------------------*/
+/*****************************************
+.media object
+******************************************/
+/**
+ * Place any image- and text-like content side-by-side, as per:
+ * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ * E.g.:
+ * 
+   <div class="media">
+       <img src="http://placekitten.com/200/300" alt="" class"media-img">
+       <p class="media-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+   </div>
+ * 
+ * Demo: jsfiddle.net/inuitcss/cf4Qs
+ * 
+ */
+.media {
+  display: block; }
+
+.media-img {
+  float: left;
+  margin-right: 1em; }
+
+/**
+ * Reversed image location (right instead of left).
+ */
+.media-img-rev {
+  float: right;
+  margin-left: 1em; }
+
+.media-img img,
+.media-img-rev img {
+  display: block; }
+
+.media-body {
+  overflow: hidden; }
+
+.media-body,
+.media-body > :last-child {
+  margin-bottom: 0; }
+
+/**
+ * `.img`s in `.islet`s need an appropriately sized margin.
+ */
+.islet .media-img {
+  margin-right: .5em; }
+
+.islet .media-img-rev {
+  margin-left: .5em; }
+
+/*****************************************
+.nav object
+******************************************/
+.nav {
+  margin: 0;
+  padding: 0; }
+  .nav li {
+    display: inline; }
+
+/*------------------------------------------------------------------
+[$PARTIAL-RESET]
+
+The reset.
+-------------------------------------------------------------------*/
+* {
+  padding: 0;
+  margin: 0; }
+
+/*------------------------------------------------------------------
+[$PARTIAL-BASE]
+
+These are our base stuff. These reset things, clean stuff up and
+make text look nice.
+-------------------------------------------------------------------*/
+/*---------------------------------------
+[Body]
+/*--------------------------------------*/
+body {
+  font: 1em Helvetica, Arial, sans-serif; }
+
+/*---------------------------------------
+[Images]
+/*--------------------------------------*/
+a img {
+  border: 0; }
+
+/*---------------------------------------
+[Colours]
+/*--------------------------------------*/
+.success {
+  background: #dff0d8 !important; }
+
+.warning {
+  background: #fcf8e3 !important; }
+
+.error {
+  background: #f2dede !important; }
+
+.info {
+  background: #d9edf7 !important; }
+
+/*---------------------------------------
+[Helpers]
+/*--------------------------------------*/
+/* nicolasgallagher.com/micro-clearfix-hack */
+.cf, .media, .gw, .grid-wrapper, .form__checkbox, .form__radio, .form__group, .form__actions, .nav--dropdown, .navbar {
+  zoom: 1; }
+  .cf:before, .media:before, .gw:before, .grid-wrapper:before, .form__checkbox:before, .form__radio:before, .form__group:before, .form__actions:before, .nav--dropdown:before, .navbar:before, .cf:after, .media:after, .gw:after, .grid-wrapper:after, .form__checkbox:after, .form__radio:after, .form__group:after, .form__actions:after, .nav--dropdown:after, .navbar:after {
+    content: " ";
+    display: table; }
+  .cf:after, .media:after, .gw:after, .grid-wrapper:after, .form__checkbox:after, .form__radio:after, .form__group:after, .form__actions:after, .nav--dropdown:after, .navbar:after {
+    clear: both; }
+
+/*------------------------------------------------------------------
+[$PARTIAL-HELPERS]
+
+These are basic helpers you can utilise in your code for 
+common fixes.
+-------------------------------------------------------------------*/
+.g-float-right {
+  float: right !important; }
+
+.g-float-left {
+  float: left !important; }
+
+.g-align-right {
+  text-align: left !important; }
+
+.g-align-right {
+  text-align: right !important; }
+
+/*------------------------------------------------------------------
+[$PARTIAL-BREAKPOINTS]
+
+These are our mixins for breakpoints.
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[$PARTIAL-TYPE]
+
+Type resets.
+-------------------------------------------------------------------*/
+/*---------------------------------------
+[Headings]
+/*--------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: .5em; }
+
+h1, .alpha {
+  font-size: 2em; }
+
+h2, .beta {
+  font-size: 1.6em; }
+
+h3, .gamma {
+  font-size: 1.4em; }
+
+h4, .delta {
+  font-size: 1.2em; }
+
+h5, .epsilon {
+  font-size: 1em; }
+
+h6, .zeta {
+  font-size: 1em; }
+
+/*---------------------------------------
+[Paragraphs]
+/*--------------------------------------*/
+p {
+  margin-bottom: .5em;
+  line-height: 135%; }
+
+/*---------------------------------------
+[Lists]
+/*--------------------------------------*/
+ul, ol {
+  margin-left: 2em;
+  margin-bottom: .5em; }
+
+li {
+  margin-bottom: .2em;
+  line-height: 135%; }
+
+dl {
+  margin-bottom: .5em; }
+
+/*---------------------------------------
+[Blockquote]
+/*--------------------------------------*/
+blockquote {
+  padding: 0 1em;
+  border-left: 3px solid #ccc;
+  margin-bottom: .5em; }
+
+/*---------------------------------------
+[PRE]
+/*--------------------------------------*/
+pre {
+  margin-bottom: .5em; }
+
+/*---------------------------------------
+[Figures]
+/*--------------------------------------*/
+figure {
+  margin-bottom: .5em; }
+
+figcaption {
+  font-style: italic;
+  font-size: 0.8em; }
+
+/*---------------------------------------
+[Code]
+/*--------------------------------------*/
+code {
+  background: #f7f7f9;
+  padding: .2em;
+  border: 1px solid #ececec;
+  color: #e52c57; }
+
+/*------------------------------------------------------------------
+[$PARTIAL-RESET]
+
+Basic table resets.
+-------------------------------------------------------------------*/
+/*---------------------------------------
+[Basic Layout]
+/*--------------------------------------*/
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1em; }
+  .table caption {
+    text-align: left; }
+
+.table th, .table td {
+  text-align: left;
+  padding: .8em; }
+
+.table tbody th, .table tbody td {
+  border-top: 1px solid #ccc; }
+
+/*---------------------------------------
+[.table--striped]
+/*--------------------------------------*/
+.table--striped tbody tr:nth-child(odd) {
+  background: #ccc; }
+
+/*---------------------------------------
+[.table--bordered]
+/*--------------------------------------*/
+.table--bordered {
+  border: 1px solid #ccc; }
+
+/*---------------------------------------
+[.table--hover]
+/*--------------------------------------*/
+.table--hover tbody tr:hover {
+  background: #ccc; }
+
+/*---------------------------------------
+[.table--condensed]
+/*--------------------------------------*/
+.table--condensed th, .table--condensed td {
+  padding: .4em; }
+
+/*------------------------------------------------------------------
+[$PARTIAL-FORMS]
+
+Basic form layouts and resets.
+-------------------------------------------------------------------*/
+fieldset {
+  border: 0; }
+
+legend {
+  display: block;
+  width: 100%;
+  font-size: 1.6em;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: .7em;
+  padding-bottom: .2em; }
+
+label {
+  display: block;
+  margin-bottom: .5em;
+  cursor: pointer; }
+
+/*---------------------------------------
+[Standard input styling]
+/*--------------------------------------*/
+input {
+  display: block;
+  outline: none; }
+
+input[type=text] {
+  border: 1px solid #ccc;
+  padding: .7em;
+  font-size: .8em; }
+
+textarea {
+  border: 1px solid #ccc;
+  padding: .7em;
+  font-size: .8em; }
+
+input[type=checkbox], input[type=radio] {
+  float: left;
+  margin-right: 8px; }
+
+/*------------------------------------------------------------------
+[$PARTIAL-GRID]
+
+Our grid. Used to lay stuff out effectively.
+-------------------------------------------------------------------*/
+.container {
+  width: 960px;
+  max-width: 95%;
+  margin: 0 auto; }
+
+.gw, .grid-wrapper {
+  /**
+   * Negative margin to negate the padding on the first grid child.
+   */
+  margin-left: -20px;
+  /**
+   * The following declarations allow us to use the `.gw` class on lists.
+   */
+  list-style: none;
+  margin-bottom: 0; }
+
+.gw > .gw {
+  margin-left: 0; }
+
+.g {
+  float: left;
+  padding-left: 20px;
+  webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url(/boxsizing.htc); }
+
+.gw--full {
+  margin-left: 0; }
+  .gw--full .g {
+    padding-left: 0; }
+
+.one-whole {
+  width: 100%; }
+
+.one-half, .two-quarters, .three-sixths, .four-eighths, .five-tenths {
+  width: 50%; }
+
+.one-third, .two-sixths {
+  width: 33.333%; }
+
+.two-thirds, .four-sixths {
+  width: 66.666%; }
+
+.one-quarter, .two-eighths {
+  width: 25%; }
+
+.three-quarters, .six-eighths {
+  width: 75%; }
+
+.one-fifth, .two-tenths, .four-tenths {
+  width: 20%; }
+
+.two-fifths {
+  width: 40%; }
+
+.three-fifths, .six-tenths {
+  width: 60%; }
+
+.four-fifths, .eight-tenths {
+  width: 80%; }
+
+.one-sixth {
+  width: 16.666%; }
+
+.five-sixths {
+  width: 83.333%; }
+
+.one-eighth {
+  width: 12.5%; }
+
+.three-eighths {
+  width: 37.5%; }
+
+.five-eighths {
+  width: 62.5%; }
+
+.seven-eighths {
+  width: 87.5%; }
+
+.one-tenth {
+  width: 10%; }
+
+.three-tenths {
+  width: 30%; }
+
+.seven-tenths {
+  width: 70%; }
+
+.nine-tenths {
+  width: 90%; }
+
+/*------------------------------------------------------------------
+[$ELEMENT-CONTENT]
+-------------------------------------------------------------------*/
+/*---------------------------------------------
+[$credit]
+
+.credit
+----------------------------------------------*/
+.credit {
+  font-size: .7em; }
+
+.credit--footer {
+  border-top: 1px solid #ccc;
+  padding-top: 1em;
+  margin-top: 1em; }
+
+.credit--header {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1em;
+  margin-bottom: 1em; }
+
+/*---------------------------------------------
+[$content-block]
+
+Used to achieve a title followed by a 
+subtitle effect. A useful wrapper for content.
+
+<div class="content-block">
+	<div class="content-block__title">
+		<h2>Your content title</h2>
+		<div class="content-block__subtitle">
+			<p>Your content subtitle</p>
+		</div>
+		<!-- /.content-block__subtitle -->
+	</div>
+	<!-- /.content-block__title -->
+	<div class="content-block__body">
+		<p>Your main content</p>
+	</div>
+</div>
+<!-- /.content-block -->
+----------------------------------------------*/
+.content-block {
+  margin-bottom: 40px; }
+
+.content-block__title h1, .content-block__title h2, .content-block__title h3, .content-block__title h4, .content-block__title h5, .content-block__title h6 {
+  font-size: 35px;
+  margin-bottom: 5px; }
+
+.content-block__subtitle p {
+  font-size: 18px; }
+
+/*------------------------------------------------------------------
+[$ELEMENT-FORMS]
+-------------------------------------------------------------------*/
+.form li {
+  margin: 0; }
+
+.form--horizontal label {
+  margin-bottom: 0; }
+.form--horizontal .form__label {
+  width: 25%;
+  float: left;
+  margin-bottom: 0; }
+.form--horizontal .form__group {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1em; }
+.form--horizontal .form__help-block {
+  margin: 0 0 0 25%; }
+.form--horizontal input[type=text], .form--horizontal textarea {
+  width: 72%; }
+.form--horizontal select {
+  width: 30%; }
+.form--horizontal ul {
+  width: 75%;
+  float: right;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .form--horizontal ul li {
+    margin-bottom: 5px; }
+
+.form__help-block {
+  display: block;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  font-size: .9em;
+  padding-top: .5em;
+  margin-bottom: 0; }
+  .form__help-block p {
+    margin-bottom: 0; }
+
+.form__checkbox, .form__radio {
+  font-size: .9em;
+  line-height: .9em;
+  margin-bottom: 1em; }
+
+.form__field-inline {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap; }
+
+.form__group {
+  margin-bottom: 1.5em; }
+
+.form__group--check label {
+  width: 75%;
+  float: right; }
+
+.form__actions {
+  clear: both; }
+
+input[type=submit].btn {
+  border: 0;
+  cursor: pointer; }
+
+/*------------------------------------------------------------------
+[$ELEMENT-HERO]
+-------------------------------------------------------------------*/
+/*---------------------------------------------
+[$hero]
+
+Hero abstraction to produce an image or text 
+area
+----------------------------------------------*/
+.hero {
+  border: 1px solid #ccc; }
+  .hero img {
+    display: block; }
+
+.hero--img-text, .hero--with-menu {
+  position: relative; }
+
+.hero--img-text .hero__title {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0; }
+
+.hero--with-menu .hero__menu {
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
+.hero--with-vertical-menu .hero__menu {
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+.hero__title {
+  padding: 4em; }
+  .hero__title h1, .hero__title h2, .hero__title h3, .hero__title h4, .hero__title h5, .hero__title h6 {
+    font-size: 3em;
+    margin-bottom: 0; }
+
+.hero__subtitle h1, .hero__subtitle h2, .hero__subtitle h3, .hero__subtitle h4, .hero__subtitle h5, .hero__subtitle h6, .hero__subtitle p {
+  font-size: 1.8em;
+  margin-bottom: 0; }
+
+.hero__menu {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  opacity: 0.9;
+  background-color: #eee;
+  position: absolute; }
+
+/*------------------------------------------------------------------
+[$ELEMENT-MODALS]
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[$ELEMENT-NAVIGATION]
+-------------------------------------------------------------------*/
+/*---------------------------------------------
+[$nav]
+
+Basic linked navigation
+----------------------------------------------*/
+.nav ul {
+  margin: 0; }
+
+.nav--vertical li {
+  display: block; }
+
+.nav--breadcrumb li:after {
+  content: " >"; }
+.nav--breadcrumb li:last-child {
+  font-weight: bold; }
+  .nav--breadcrumb li:last-child:after {
+    content: ""; }
+
+/*---------------------------------------------
+[$dropdown]
+
+Add .dropdown class on to a properly structured 
+nested list and this will do all the work for you.
+
+Tested and works in:
+    - Modern browsers
+    - IE10, IE9, IE8, IE7
+----------------------------------------------*/
+.dropdown {
+  position: relative;
+  list-style: none;
+  z-index: 5; }
+  .dropdown li {
+    position: relative;
+    float: left; }
+  .dropdown a {
+    white-space: nowrap;
+    display: block; }
+  .dropdown ul {
+    list-style: none;
+    position: absolute !important;
+    left: -9999px; }
+  .dropdown ul li {
+    padding-top: 1px;
+    float: none; }
+  .dropdown ul a {
+    white-space: nowrap; }
+  .dropdown li:hover ul {
+    position: absolute;
+    left: 0; }
+
+/*---------------------------------------------
+[$navbar]
+
+Navbar type header thing
+----------------------------------------------*/
+.navbar {
+  background: #eee; }
+  .navbar .active a {
+    background: #fff; }
+  .navbar ul {
+    margin: 0; }
+
+.navbar__title {
+  float: left; }
+  .navbar__title a {
+    display: block;
+    padding: 1em; }
+
+.navbar__nav {
+  float: left; }
+  .navbar__nav li {
+    float: left;
+    display: block;
+    margin-bottom: 0; }
+  .navbar__nav a {
+    display: block;
+    padding: 1em;
+    float: left; }
+    .navbar__nav a:hover {
+      background: #fff; }
+
+/*------------------------------------------------------------------
+[$ELEMENT-TABS]
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[$Colours]
+
+Set up your site's colours. I usually name space these to make
+them easier to find.
+
+e.g. $gd-red
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[$Base]
+
+Body styles, basic link styles
+-------------------------------------------------------------------*/
+a, a:visited {
+  color: #005ea7;
+  text-decoration: none; }
+  a:hover, a:visited:hover {
+    background: #005ea7; }
+
+body {
+  color: #444; }
+
+.container {
+  width: auto;
+  max-width: none;
+  padding: 5%; }
+
+/*------------------------------------------------------------------
+[$Type]
+
+Web fonts, basic unclassed type styles
+-------------------------------------------------------------------*/
+/* Generated by Font Squirrel (http://www.fontsquirrel.com) on May 5, 2014 */
+@font-face {
+  font-family: 'langdonregular';
+  src: url("../fonts/langdon-webfont.eot");
+  src: url("../fonts/langdon-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/langdon-webfont.woff") format("woff"), url("../fonts/langdon-webfont.ttf") format("truetype"), url("../fonts/langdon-webfont.svg#langdonregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.langdon, .site-header h1, .site-footer h1 {
+  font-weight: normal;
+  font-family: "langdonregular", Arial, sans-serif; }
+
+.garamond-reg, .site-header .nav, .site-footer .nav, .site-footer p {
+  font-weight: normal;
+  font-family: "adobe-garamond-pro", Georgia, Times, serif; }
+
+.garamond-bold {
+  font-weight: 700;
+  font-family: "adobe-garamond-pro", Georgia, Times, serif; }
+
+.site-header h1, .site-footer h1 {
+  text-transform: uppercase;
+  color: #ff0003; }
+  .site-header h1 a, .site-header h1 a:visited, .site-footer h1 a, .site-footer h1 a:visited {
+    color: #ff0003; }
+    .site-header h1 a:hover, .site-header h1 a:visited:hover, .site-footer h1 a:hover, .site-footer h1 a:visited:hover {
+      background: #ff0003; }
+.site-header .nav li, .site-footer .nav li {
+  margin-right: 10px;
+  font-size: 1.3em; }
+
+.site-footer p {
+  font-size: 1em;
+  margin: 0; }
+
+/*------------------------------------------------------------------
+[$Abstractions]
+
+Reusable design chunks
+-------------------------------------------------------------------*/
+/*---------------------------------------------
+[$btn]
+
+Button class to make nice buttons
+
+<a class="btn" href="#" />
+----------------------------------------------*/
+.btn {
+  background: #333;
+  color: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  padding: 6px 10px;
+  line-height: 100%;
+  display: inline-block;
+  transition: all .3 ease-in; }
+  .btn:visited {
+    color: #fff; }
+  .btn:hover {
+    background: #000; }
+
+/*---------------------------------------------
+[$info-box]
+
+Used to achieve a boxed off content effect.
+Can be used simply with our without an image.
+
+<div class="info-box">
+	<div class="info-box__title">
+		<h3>Personal training</h3>
+	</div>
+	<!-- /.info-box__title -->
+	<div class="info-box__body">
+		<p>Nulla vel mauris quis justo mollis iaculis vitae ac mi. Integer odio augue, faucibus et varius id, laoreet sed tortor.e</p>
+	</div>
+	<!-- /.info-box__body -->
+	<div class="info-box__cta">
+		<p><a href="#" class="btn">Find out more</a></p>
+	</div>
+	<!-- /.info-box__cta -->
+</div>
+<!-- /.info-box -->
+----------------------------------------------*/
+.info-box {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  border: 1px solid #e1e1e1;
+  background-color: #f5f5f5;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-repeat: none;
+  background-position: top left;
+  overflow: hidden; }
+
+.info-box__title {
+  margin-bottom: 1em; }
+  .info-box__title h1, .info-box__title h2, .info-box__title h3, .info-box__title h4, .info-box__title h5, .info-box__title h6 {
+    font-size: 30px;
+    margin-bottom: 0; }
+
+.info-box__body {
+  margin-bottom: 1em; }
+
+/*---------------------------------------------
+[$snippet]
+
+Used on homepage
+----------------------------------------------*/
+.snippet {
+  background: #eee;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px; }
+  .snippet div:first-child {
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    -ms-border-radius: 4px 4px 0 0;
+    -o-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0; }
+  .snippet a:hover h1, .snippet a:hover h2, .snippet a:hover h3, .snippet a:hover h4, .snippet a:hover h5, .snippet a:hover h6 {
+    display: inline;
+    background: #005ea7; }
+
+.snippet__meta {
+  color: #333;
+  padding: 8px 10px;
+  font-size: .8em; }
+  .snippet__meta p {
+    margin: 0; }
+
+.snippet__body {
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  -ms-border-radius: 0 0 4px 4px;
+  -o-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+  color: #005ea7;
+  padding: 0 10px 0px 10px; }
+  .snippet__body a, .snippet__body a:visited {
+    color: #fff; }
+
+.snippet__title h1, .snippet__title h2, .snippet__title h3, .snippet__title h4, .snippet__title h5, .snippet__title h6 {
+  margin: 0;
+  line-height: 120%;
+  font-size: 1.1em; }
+
+.content-block {
+  margin: 0; }
+
+.content-block__body {
+  padding: 50px 0; }
+
+.post {
+  width: 60%; }
+
+.post__body p, .post__body li {
+  line-height: 155%; }
+.post__body p {
+  margin-bottom: 1.5em; }
+
+.post__meta {
+  font-size: 0.9em;
+  border-bottom: 1px dashed #ccc;
+  margin-bottom: 1.2em;
+  padding-bottom: 1em; }
+
+/*------------------------------------------------------------------
+[$Style_trumps]
+
+Helper classes, specifc 1-off styles, error styles etc.
+-------------------------------------------------------------------*/

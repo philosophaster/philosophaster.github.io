@@ -1,0 +1,51 @@
+/*------------------------------------------------------------------
+[$PARTIAL-FORMS]
+
+Basic form layouts and resets.
+-------------------------------------------------------------------*/
+
+
+fieldset {
+	border: 0;
+}
+
+legend {
+	display: block;
+	width: 100%;
+	font-size: $h2-size + $main-font-sizing-unit;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: .7em;
+	padding-bottom: .2em;
+}
+
+label {
+	display: block;
+	margin-bottom: .5em;
+	cursor: pointer;
+}
+
+/*---------------------------------------
+[Standard input styling]
+/*--------------------------------------*/
+
+input {
+	display: block;
+	outline: none;
+}
+
+input[type=text] {	
+	border: 1px solid #ccc;
+	padding: .7em;
+	font-size: .8em;
+}
+
+textarea {
+	border: 1px solid #ccc;
+	padding: .7em;
+	font-size: .8em;	
+}
+
+input[type=checkbox], input[type=radio] {
+	float: left;
+	margin-right: 8px;
+}

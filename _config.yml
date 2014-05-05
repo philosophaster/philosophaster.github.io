@@ -1,3 +1,9 @@
-name: Your New Jekyll Site
+name: Philosophaster - The Knowledge. The Light. The True Way.
 markdown: redcarpet
 pygments: true
+
+
+url:           http://philosophaster.com
+author:        Philosophaster
+description:   The RSS feed for the best blog you'll ever read.
+permalink:	/:title

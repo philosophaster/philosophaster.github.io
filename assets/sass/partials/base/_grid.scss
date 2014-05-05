@@ -1,0 +1,128 @@
+/*------------------------------------------------------------------
+[$PARTIAL-GRID]
+
+Our grid. Used to lay stuff out effectively.
+-------------------------------------------------------------------*/
+
+
+.container {
+	width: $container-width;
+	max-width: 95%;
+	margin: 0 auto;
+}
+
+.gw, .grid-wrapper {
+    /**
+     * Negative margin to negate the padding on the first grid child.
+     */
+    margin-left:-$grid-gutter;
+    /**
+     * The following declarations allow us to use the `.gw` class on lists.
+     */
+    list-style:none;
+    margin-bottom:0;
+    @extend .cf;
+}
+
+	.gw > .gw {
+		margin-left: 0;
+	}
+
+.g {
+	float: left;
+	padding-left: $grid-gutter;
+	webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	box-sizing:border-box;
+	*behavior: url(/boxsizing.htc);
+}
+
+.gw--full {
+	margin-left: 0;
+	
+	.g {
+		padding-left: 0;
+	}
+}
+
+.one-whole {
+	width: 100%;
+}
+
+.one-half, .two-quarters, .three-sixths, .four-eighths, .five-tenths {
+	width: 50%;
+}
+
+.one-third, .two-sixths {
+	width: 33.333%;
+}
+
+.two-thirds, .four-sixths {
+	width: 66.666%;
+}
+
+.one-quarter, .two-eighths {
+	width: 25%;
+}
+
+.three-quarters, .six-eighths {
+	width: 75%;
+}
+
+.one-fifth, .two-tenths, .four-tenths {
+	width: 20%;
+}
+
+.two-fifths {
+	width: 40%;
+}
+
+.three-fifths, .six-tenths {
+	width: 60%;
+}
+
+.four-fifths, .eight-tenths {
+	width: 80%;
+}
+
+.one-sixth {
+	width: 16.666%;
+}
+
+.five-sixths {
+	width: 83.333%;
+}
+
+.one-eighth {
+	width: 12.5%;
+}
+
+.three-eighths {
+	width: 37.5%;
+}
+
+.five-eighths {
+	width: 62.5%;
+}
+
+.seven-eighths {
+	width: 87.5%;
+}
+
+.one-tenth {
+	width: 10%;
+}
+
+.three-tenths {
+	width: 30%;
+}
+
+.seven-tenths {
+	width: 70%;
+}
+
+.nine-tenths {
+	width: 90%;
+}

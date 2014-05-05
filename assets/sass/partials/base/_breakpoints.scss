@@ -1,0 +1,49 @@
+/*------------------------------------------------------------------
+[$PARTIAL-BREAKPOINTS]
+
+These are our mixins for breakpoints.
+-------------------------------------------------------------------*/
+
+@mixin custom-breakpoint($pixel) {
+	@media (min-width: $pixel+px)  { @content; }
+}
+
+@mixin breakpoint($point) {
+	@if $point == xl {
+		@media (min-width: 1600px) { @content; }
+	}
+	@else if $point == l {
+		@media (min-width: 1200px) { @content; }
+	}
+	@else if $point == m {
+		@media (min-width: 840px)  { @content; }
+	}
+	@else if $point == s {
+		@media (min-width: 640px)  { @content; }
+	}
+	@else if $point == xs {
+		@media (min-width: 320px)  { @content; }
+	}
+}
+
+@mixin custom-max-breakpoint($pixel) {
+	@media (max-width: $pixel+px)  { @content; }
+}
+
+@mixin max-breakpoint($point) {
+	@if $point == xl {
+		@media (max-width: 1600px) { @content; }
+	}
+	@else if $point == l {
+		@media (max-width: 1200px) { @content; }
+	}
+	@else if $point == m {
+		@media (max-width: 840px)  { @content; }
+	}
+	@else if $point == s {
+		@media (max-width: 640px)  { @content; }
+	}
+	@else if $point == xs {
+		@media (max-width: 320px)  { @content; }
+	}
+}

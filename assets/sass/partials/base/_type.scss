@@ -1,0 +1,107 @@
+/*------------------------------------------------------------------
+[$PARTIAL-TYPE]
+
+Type resets.
+-------------------------------------------------------------------*/
+
+
+/*---------------------------------------
+[Headings]
+/*--------------------------------------*/
+
+h1,h2,h3,h4,h5,h6 {
+	margin-bottom: .5em;
+}
+
+h1, .alpha {
+	font-size: $h1-size + $main-font-sizing-unit;
+}
+
+h2, .beta {
+	font-size: $h2-size + $main-font-sizing-unit;
+}
+
+h3,.gamma {
+	font-size: $h3-size + $main-font-sizing-unit;
+}
+
+h4,.delta {
+    font-size: $h4-size + $main-font-sizing-unit;
+}
+
+h5,.epsilon {
+    font-size: $h5-size + $main-font-sizing-unit;
+}
+
+h6,.zeta {
+    font-size: $h6-size + $main-font-sizing-unit;
+}
+
+/*---------------------------------------
+[Paragraphs]
+/*--------------------------------------*/
+
+p {
+	margin-bottom: .5em;
+	line-height: 135%;
+}
+
+/*---------------------------------------
+[Lists]
+/*--------------------------------------*/
+
+ul,ol {
+	margin-left: 2em;
+	margin-bottom: .5em;
+}
+
+	li {
+		margin-bottom: .2em;
+		line-height: 135%;
+	}
+
+dl {
+	margin-bottom: .5em;
+}
+
+/*---------------------------------------
+[Blockquote]
+/*--------------------------------------*/
+
+blockquote {
+	padding: 0 1em;
+	border-left: 3px solid #ccc;
+	margin-bottom: .5em;
+}
+
+/*---------------------------------------
+[PRE]
+/*--------------------------------------*/
+
+pre {
+	margin-bottom: .5em;
+}
+
+/*---------------------------------------
+[Figures]
+/*--------------------------------------*/
+
+figure {
+	margin-bottom: .5em;
+}
+
+	figcaption {
+		font-style: italic;
+		font-size: 0.8em;
+	}
+
+/*---------------------------------------
+[Code]
+/*--------------------------------------*/
+
+code {
+	background: #f7f7f9;
+	padding: .2em;
+	border: 1px solid #ececec;
+	color: #e52c57;
+}

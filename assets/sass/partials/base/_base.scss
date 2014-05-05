@@ -1,0 +1,64 @@
+/*------------------------------------------------------------------
+[$PARTIAL-BASE]
+
+These are our base stuff. These reset things, clean stuff up and
+make text look nice.
+-------------------------------------------------------------------*/
+
+/*---------------------------------------
+[Body]
+/*--------------------------------------*/
+
+body {
+	font: 1em Helvetica, Arial, sans-serif;
+}
+
+/*---------------------------------------
+[Images]
+/*--------------------------------------*/
+
+a img {
+    border: 0;
+}
+
+/*---------------------------------------
+[Colours]
+/*--------------------------------------*/
+
+.success {
+    background: $success-colour !important;
+}
+
+.warning {
+    background: $warning-colour !important;
+}
+
+.error {
+    background: $error-colour !important;
+}
+
+.info {
+    background: $info-colour !important;
+}
+
+
+/*---------------------------------------
+[Helpers]
+/*--------------------------------------*/
+
+/* nicolasgallagher.com/micro-clearfix-hack */
+
+.cf
+{
+    zoom:1;
+    
+    &:before,
+    &:after{
+        content:" ";
+        display:table;
+    }
+    
+    &:after{
+        clear:both;
+    }
+}

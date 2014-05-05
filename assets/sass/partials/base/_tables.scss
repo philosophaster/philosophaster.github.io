@@ -1,0 +1,60 @@
+/*------------------------------------------------------------------
+[$PARTIAL-RESET]
+
+Basic table resets.
+-------------------------------------------------------------------*/
+
+/*---------------------------------------
+[Basic Layout]
+/*--------------------------------------*/
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 1em;
+
+	caption {
+		text-align: left;
+	}
+}
+
+	.table th, .table td {
+		text-align: left;		
+		padding: .8em;
+	}
+
+	.table tbody th, .table tbody td {
+		border-top: 1px solid #ccc;
+	}
+
+/*---------------------------------------
+[.table--striped]
+/*--------------------------------------*/
+
+.table--striped tbody tr:nth-child(odd) {
+	background: #ccc;
+}
+
+/*---------------------------------------
+[.table--bordered]
+/*--------------------------------------*/
+
+.table--bordered {
+	border: 1px solid #ccc;
+}
+
+/*---------------------------------------
+[.table--hover]
+/*--------------------------------------*/
+
+.table--hover tbody tr:hover {
+	background: #ccc;
+}
+
+/*---------------------------------------
+[.table--condensed]
+/*--------------------------------------*/
+
+.table--condensed th, .table--condensed td {
+	padding: .4em;
+}

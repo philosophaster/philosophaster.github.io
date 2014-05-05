@@ -1,0 +1,86 @@
+/*------------------------------------------------------------------
+[$ELEMENT-CONTENT]
+-------------------------------------------------------------------*/
+
+
+/*---------------------------------------------
+[$credit]
+
+.credit
+----------------------------------------------*/
+
+.credit {	
+	font-size: .7em;	
+}
+
+.credit--footer {
+	border-top: 1px solid #ccc;
+	padding-top: 1em;
+	margin-top: 1em;
+}
+
+.credit--header {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 1em;
+	margin-bottom: 1em;
+}
+
+	.credit__title {
+
+	}
+
+	.credit__body {
+
+	}
+
+/*---------------------------------------------
+// ENDS [credit]
+----------------------------------------------*/
+
+
+/*---------------------------------------------
+[$content-block]
+
+Used to achieve a title followed by a 
+subtitle effect. A useful wrapper for content.
+
+<div class="content-block">
+	<div class="content-block__title">
+		<h2>Your content title</h2>
+		<div class="content-block__subtitle">
+			<p>Your content subtitle</p>
+		</div>
+		<!-- /.content-block__subtitle -->
+	</div>
+	<!-- /.content-block__title -->
+	<div class="content-block__body">
+		<p>Your main content</p>
+	</div>
+</div>
+<!-- /.content-block -->
+----------------------------------------------*/
+
+.content-block {
+	margin-bottom: 40px;
+}
+
+	.content-block__title {
+		h1,h2,h3,h4,h5,h6 {
+			font-size: 35px;
+			margin-bottom: 5px;
+		}
+	}
+
+	.content-block__subtitle {
+		p {
+			font-size: 18px;
+		}
+	}
+
+	.content-block__body {
+
+	}
+
+/*---------------------------------------------
+// ENDS [content-block]
+----------------------------------------------*/

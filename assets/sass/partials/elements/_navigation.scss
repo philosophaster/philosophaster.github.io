@@ -1,0 +1,152 @@
+/*------------------------------------------------------------------
+[$ELEMENT-NAVIGATION]
+-------------------------------------------------------------------*/
+
+/*---------------------------------------------
+[$nav]
+
+Basic linked navigation
+----------------------------------------------*/
+
+.nav {
+	ul {
+		margin: 0;
+	}
+}
+
+.nav--vertical {
+	li {
+		display: block;
+	}
+}
+
+.nav--breadcrumb {
+	li:after {
+		content: " >";
+	}
+
+	li:last-child {
+		font-weight: bold;
+		&:after {
+			content: "";
+		}
+	}
+}
+
+/*---------------------------------------------
+// ENDS [nav]
+----------------------------------------------*/
+
+
+
+
+/*---------------------------------------------
+[$dropdown]
+
+Add .dropdown class on to a properly structured 
+nested list and this will do all the work for you.
+
+Tested and works in:
+    - Modern browsers
+    - IE10, IE9, IE8, IE7
+----------------------------------------------*/
+
+.nav--dropdown {
+	@extend .cf;
+}
+
+.dropdown {
+    position: relative;
+    list-style: none;
+    z-index: 5;
+
+    li {
+        position: relative;
+        float: left;
+    }
+
+    a {
+        white-space: nowrap;
+        display: block;
+    }
+
+    ul {
+        list-style: none;
+        position: absolute !important;
+        left: -9999px;
+    }
+
+    ul li{
+        padding-top:1px; 
+        float:none;
+    }
+
+    ul a {
+        white-space: nowrap;
+    }
+
+    li:hover ul{ 
+        position: absolute;
+        left: 0;
+    }
+}
+
+
+/*---------------------------------------------
+// ENDS [dropdown]
+----------------------------------------------*/
+
+/*---------------------------------------------
+[$navbar]
+
+Navbar type header thing
+----------------------------------------------*/
+
+.navbar {
+	@extend .cf;
+	background: #eee;
+
+	.active {
+		a {
+			background: #fff;
+		}
+	}
+
+	ul {
+		margin: 0;
+	}
+}
+
+	.navbar__title {
+		float: left;		
+
+		a {
+			display: block;
+			padding: 1em;
+		}
+	}
+
+	.navbar__nav {		
+		float: left;
+
+		li {
+			float: left;
+			display: block;
+			margin-bottom: 0;
+		}
+
+		a {
+			display: block;
+			padding: 1em;
+			float: left;
+
+			&:hover {
+				background: #fff;
+			}
+		}
+	}
+
+
+/*---------------------------------------------
+// ENDS [navbar]
+----------------------------------------------*/

@@ -1,0 +1,82 @@
+/*------------------------------------------------------------------
+[$ELEMENT-HERO]
+-------------------------------------------------------------------*/
+
+/*---------------------------------------------
+[$hero]
+
+Hero abstraction to produce an image or text 
+area
+----------------------------------------------*/
+
+.hero {
+	border: 1px solid #ccc;
+
+	img {
+		display: block;
+	}
+}
+
+.hero--img-text, .hero--with-menu {
+	position: relative;
+}
+
+.hero--img-text {
+	.hero__title {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+	}
+}
+
+.hero--with-menu {
+	.hero__menu {
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+}
+
+.hero--with-vertical-menu {
+	.hero__menu {
+		top: 0;
+		left: 0;
+		bottom: 0;		
+	}
+}
+
+	.hero__slider {
+
+	}
+
+		.hero__slide {
+
+		}
+
+			.hero__title {
+				padding: 4em;
+
+				h1,h2,h3,h4,h5,h6 {
+					font-size: 3em;
+					margin-bottom: 0;
+				}
+			}
+
+			.hero__subtitle {
+				h1,h2,h3,h4,h5,h6,p {
+					font-size: 1.8em;
+					margin-bottom: 0;
+				}
+			}
+
+			.hero__menu {
+				@include opacity(.9);
+				background-color: #eee;				
+				position: absolute;
+			}
+
+/*---------------------------------------------
+// ENDS [hero]
+----------------------------------------------*/

@@ -1,0 +1,101 @@
+/*------------------------------------------------------------------
+[$ELEMENT-FORMS]
+-------------------------------------------------------------------*/
+
+.form {
+	li {
+		margin: 0;
+	}
+}
+
+	.form--horizontal {
+		label {
+			margin-bottom: 0;
+		}
+
+		.form__label {
+			width: 25%;
+			float: left;
+			margin-bottom: 0;
+		}
+
+		.form__group {
+			border-bottom: 1px solid #ccc;
+			padding-bottom: 1em;
+		}
+
+		.form__help-block {
+			margin: 0 0 0 25%;
+		}
+
+		input[type=text], textarea {
+			width: 72%;
+		}
+
+		select {
+			width: 30%;
+		}
+
+		ul {
+			width: 75%;
+			float: right;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+
+			li {
+				margin-bottom: 5px;
+			}
+		}
+	}
+
+	.form__help-block {
+		display: block;
+		@include opacity(.7);
+		font-size: .9em;
+		padding-top: .5em;
+		margin-bottom: 0;
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+	.form__checkbox {
+		font-size: .9em;
+		line-height: .9em;
+		margin-bottom: 1em;
+		@extend .cf;
+	}
+
+	.form__radio {
+		@extend .form__checkbox;
+	}
+
+	.form__field-inline {
+		display: inline-block;
+		vertical-align: middle;
+		white-space: nowrap;
+	}
+
+	.form__group {
+		@extend .cf;
+		margin-bottom: 1.5em;
+	}
+
+		.form__group--check {
+			label {
+				width: 75%;
+				float: right;
+			}
+		}
+
+	.form__actions {
+		@extend .cf;
+		clear: both;
+	}
+
+	input[type=submit].btn {
+		border: 0;
+		cursor: pointer;
+	}
