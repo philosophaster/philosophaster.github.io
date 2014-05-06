@@ -3,7 +3,7 @@ layout: post
 title:  "The ultimate 'God doesn't exist' argument"
 date:   2014-05-06 23:40:00
 categories: religion paradox
-author: "@robfiction"
+author: "@craigburgess"
 ---
 There's many arguments, theories and explanations about why God doesn't exist and how it's impossible for God to exist, but this argument has got to be my favourite. 
 
