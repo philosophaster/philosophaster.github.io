@@ -16,6 +16,8 @@ If God exists, and we presume he is [omniscient][1] as many versions of God are,
 
 If God knows everything from now until the end of time, then there is no such thing as free will, because God already knows it will happen. 
 
+Because most popular religions say that we have free will and that their god is omniscient, how can god exist?
+
 [There's more, as always, on Wikipedia.][2]
 
 [1]: http://en.wikipedia.org/wiki/Omniscience
