@@ -16,4 +16,4 @@ It turns out that something that sounds so rare isn't actually that rare, if you
 
 Bonus fact: the maths behind working out the probability of this fact lead to a cryptographic attack dubbed the [birthday attack][1]. 
 
-[1]: http://en.m.wikipedia.org/wiki/Birthday_attack
+[1]: http://en.wikipedia.org/wiki/Birthday_attack
