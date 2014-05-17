@@ -5,5 +5,4 @@ pygments: true
 
 url:           http://philosophaster.com
 author:        Philosophaster
-description:   The RSS feed for the best blog you'll ever read.
 permalink:	/:title
